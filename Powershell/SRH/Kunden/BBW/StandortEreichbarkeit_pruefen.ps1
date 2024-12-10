@@ -30,6 +30,14 @@ $Ort        = $Standort.Ort
 
 if ((Test-NetConnection $IP).PingSucceeded) { 
     
+    
+}	
+else {
+    Test-NetConnection $IP
+}
+
+if ((Test-NetConnection $IP).PingSucceeded) { 
+    
     if ($Detail -notlike ""){ 
 	write-Host "$Strasse $Ort - $Detail - ist erreichbar" -ForegroundColor Green
 	}
