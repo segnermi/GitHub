@@ -29,11 +29,20 @@ $Ort        = $Standort.Ort
 
 
 if ((Test-NetConnection $IP).PingSucceeded) { 
-    
-    
+      
 }	
 else {
-    Test-NetConnection $IP
+    Test-Connection $IP
+    
+}
+
+
+if ((Test-NetConnection $IP).PingSucceeded) { 
+      
+}	
+else {
+    Test-Connection $IP
+    
 }
 
 if ((Test-NetConnection $IP).PingSucceeded) { 
