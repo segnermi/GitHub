@@ -1,1 +1,0 @@
-robocopy C:\Users\micha\AppData\Roaming\Q-Dir\Favorites\ S:\Sicherung\QDir /XO

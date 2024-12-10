@@ -1,2 +1,0 @@
-Get-NetConnectionProfile
-Set-NetConnectionProfile -InterfaceIndex 5 -NetworkCategory Private
