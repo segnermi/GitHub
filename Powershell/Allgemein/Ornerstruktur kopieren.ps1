@@ -1,0 +1,1 @@
+xcopy D:\Daten\OneDrive S:\Images\Ordner /T /E

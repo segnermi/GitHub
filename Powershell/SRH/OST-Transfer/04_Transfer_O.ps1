@@ -1,0 +1,1 @@
+Move-Item -Path C:\OST-Transfer\*.ost -Destination O:\

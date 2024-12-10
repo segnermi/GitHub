@@ -1,0 +1,30 @@
+Name;Menu;Ordnung;Pflicht;Multi;MaxZeichen;Vorgabe;Hilfe
+INFO;Beschreibung;0;0;1;1024;Beschreibung der Konfiguration nur Kommentarfunktion;Beschreibung der Konfiguration nur Kommentarfunktion
+OU;;1;1;0;256;OU=;OU in der die Benutzer angelegt werden sollen.
+DOMAIN;;2;1;0;30;;"Domäne des Benutzers SRH, EDU oder KLINIKEN"""
+DC;;3;1;0;30;;DC auf dem der Benutzer angelgt werden soll, SRH -> SVHD-DC06, EDU ->SVHD-DC35 und KLINIKEN SVHD-DC21 oder SVGRADC21
+GROUPS;Gruppe;4;0;1;256;;Kann auf vielfälltige Weise angegegebn werden. SAMAccount oder Domäne\SAMAccountname vorzugsweise.
+SAMIDMASK;;6;1;0;30;%SAMID%;Fast immer %SAMID%
+AnteilNachname;;7;1;0;2;6;Länge des Nachnamensanteil im SAMAccountName Standard 6 sollte nicht geändert werden. Muss dann auch nicht angegeben werden.
+AnteilVorname;;8;1;0;2;2;Länge des Vornamensanteil im SAMAccountName Standard 2 sollte nicht geändert werden. Muss dann auch nicht angegeben werden.
+USERDISPLAYMASK;;9;1;0;80;%Nachname%, %Vorname% (Firmenkürzel);"Maske der Emailadresse im Normalfall ""%Nachname%; %Vorname% (Firmenkürzel)"", für extern ""%Nachname%; %Vorname% (Firmenkürzel extern)"""
+HOME;Homepath;10;0;0;256;\\Server\Freigabe\%SAMID%;UNC-Pfad des Heimatlaufwerk(Pfad\%SAMID%)
+HOMEDRIVE;Homedrive;11;0;0;2;H:;"Laufwerksbuchstaben; auf das dem Heimatlaufwerk zugewiesen werde soll. Normalerweise H:"
+HOMEFREIGABEPFADLOKAL;Lokaler Pfad Homefreigabe(Alt);12;0;0;2;;Heimatlaufwerk ist direkt eine Freigabe, hier der lokale Pfad dort hin (alte Methode)
+PROFIL;Profilpath;13;0;0;256;\\Server\Freigabe\%SAMID%;UNC-Pfad des Profilpfade (Pfad\%SAMID%)
+EXCHANGESERVER;Exchangeserver;14;0;0;30;svhd-ex01x.srh.de; Exchangeserver von dem die mailrelevante Powershell-Cmdlets geladen werden, wenn nicht angegeben, kann und wird weder Postfach noch Mailuser angelegt werden.
+EMAILADRESSEMASK;Email-Adress-Maske;15;0;0;30;%Vorname%.%Nachname%@srh.de;"Maske der Emailadresse im Normalfall ""%Vorname%.%Nachname%@srh.de"" für externe ""%Vorname%.%Nachname%.extern@srh.de"". Bei Namensgleichheit wird hinter dem Nachnamen angefangen bei 2 automatisch hochgezählt"
+EMAILADRESSEMASKREMOTE;Email-Adress-Maske-Remote;16;0;0;30;%SAMID%@srhk.mail.onmicrosoft.com;"Maske der Emailadresse im Normalfall ""%SAMID%@srhk.mail.onmicrosoft.com""."
+PASSWORT;;17;1;0;30;RND\9\1\1\1;Initialkennwort, muss bei erster Meldung muss bei der ersten Änderung geändert werden! Zufallskennwort RND\klein\groß\zahl\zeichen Anzahl der jeweiligen Zeichen
+aktiv;;18;1;0;1;1;"1 -> Konto wird aktiviert(Standard); 0 -> Konto ist deaktiviert "
+ADFELDER;Ad-Felder-Vorbelegung;19;0;1;256;"Ad-Feld;Inhalt des Ad-Feld";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Anmeldskript;;0;1;256;"scriptPath;SRHGlobal.vbs";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Beschreibung;;0;1;256;"description;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Bundesland;;0;1;256;"st;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Ort;;0;1;256;"l;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-PLZ;;0;1;256;"postalCode;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Straße;;0;1;256;"streetAddress;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Telefon;;0;1;256;"telephoneNumber;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Firma;;0;1;256;"company;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-Abteilung;;0;1;256;"department;";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
+ADFELDER;Ad-Felder-UPN;;0;1;256;"UserPrincipalName;%Email%";"Vorbelegung von Ad-Felder -> ""Ad-Feld;Inhalt des Ad-Feld"""
